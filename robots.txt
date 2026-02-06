@@ -1,0 +1,8 @@
+# robots.txt for JLA Recovery Solutions
+# https://jlarecoverysolutions.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jlarecoverysolutions.com/sitemap.xml
