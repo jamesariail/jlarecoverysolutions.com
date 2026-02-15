@@ -1,7 +1,7 @@
 /* ============================================
    JLA RECOVERY SOLUTIONS - Main Stylesheet
    Design: Modern/Dynamic (Option B)
-   Color Palette: Navy Blue (#1E3A5F) with slate accents
+   Color Palette: Dark Navy (#1B2A4A) with sage-teal accents
    Typography: Source Sans 3
 
    Table of Contents:
@@ -30,14 +30,14 @@
 
 :root {
     /* Primary Colors */
-    --color-primary: #1E3A5F;
-    --color-primary-dark: #152A45;
-    --color-primary-light: #2A4D73;
+    --color-primary: #1B2A4A;
+    --color-primary-dark: #111D33;
+    --color-primary-light: #2C4066;
 
     /* Accent Colors */
-    --color-accent: #3B82C4;
-    --color-accent-light: #60A5E8;
-    --color-accent-dark: #2563A0;
+    --color-accent: #8FB3A9;
+    --color-accent-light: #B8D4CC;
+    --color-accent-dark: #6D9488;
 
     /* Text Colors */
     --color-text: #1f2937;
@@ -48,7 +48,7 @@
     /* Background Colors */
     --color-bg: #ffffff;
     --color-bg-subtle: #f3f4f6;
-    --color-bg-dark: #1E3A5F;
+    --color-bg-dark: #1B2A4A;
     --color-bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 
     /* Border Colors */
@@ -85,7 +85,7 @@
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
     --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
     --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
-    --shadow-primary: 0 4px 14px rgba(30, 58, 95, 0.25);
+    --shadow-primary: 0 4px 14px rgba(27, 42, 74, 0.25);
 
     /* Transitions */
     --transition-fast: 0.15s ease;
@@ -288,47 +288,26 @@ header {
 
 /* Logo */
 .logo {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-primary);
     display: flex;
     align-items: center;
-    gap: 0.75rem;
     text-decoration: none;
 }
 
 .logo:hover {
-    color: var(--color-primary);
+    opacity: 0.9;
 }
 
-.logo-mark {
-    width: 40px;
+.logo-img {
+    height: 44px;
+    width: auto;
+    max-width: 220px;
+}
+
+/* Mobile logo (icon only) - shown on small screens */
+.logo-img-mobile {
+    display: none;
     height: 40px;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.logo-mark::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-    border-radius: 10px;
-    transform: rotate(-6deg);
-}
-
-.logo-mark::after {
-    content: 'JLA';
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-inverse);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    width: 40px;
 }
 
 /* Navigation */
@@ -437,7 +416,7 @@ nav a.active {
     background: var(--color-primary-dark);
     color: var(--color-text-inverse);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
+    box-shadow: 0 6px 20px rgba(27, 42, 74, 0.3);
 }
 
 .btn-secondary {
@@ -494,7 +473,7 @@ nav a.active {
     right: -20%;
     width: 80%;
     height: 200%;
-    background: linear-gradient(135deg, rgba(30, 58, 95, 0.03) 0%, rgba(59, 130, 196, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(27, 42, 74, 0.03) 0%, rgba(143, 179, 169, 0.05) 100%);
     transform: rotate(-12deg);
     border-radius: 100px;
 }
@@ -506,7 +485,7 @@ nav a.active {
     left: -10%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(59, 130, 196, 0.04) 0%, rgba(30, 58, 95, 0.02) 100%);
+    background: linear-gradient(135deg, rgba(143, 179, 169, 0.04) 0%, rgba(27, 42, 74, 0.02) 100%);
     transform: rotate(8deg);
     border-radius: 100px;
 }
@@ -573,7 +552,7 @@ nav a.active {
     right: -10%;
     width: 60%;
     height: 150%;
-    background: linear-gradient(135deg, rgba(30, 58, 95, 0.03) 0%, rgba(59, 130, 196, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(27, 42, 74, 0.03) 0%, rgba(143, 179, 169, 0.05) 100%);
     transform: rotate(-12deg);
     border-radius: 100px;
 }
@@ -638,7 +617,7 @@ nav a.active {
 .service-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, var(--color-bg-subtle) 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 20%);
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
@@ -650,6 +629,7 @@ nav a.active {
     width: 24px;
     height: 24px;
     stroke: var(--color-primary);
+    stroke-width: 2;
 }
 
 .service-card h3 {
@@ -729,7 +709,7 @@ nav a.active {
     right: 0;
     width: 40%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(59, 130, 196, 0.1) 0%, rgba(30, 58, 95, 0) 100%);
+    background: linear-gradient(135deg, rgba(143, 179, 169, 0.1) 0%, rgba(27, 42, 74, 0) 100%);
 }
 
 .why-section .section-eyebrow {
@@ -1000,7 +980,7 @@ nav a.active {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(59, 130, 196, 0.15);
+    box-shadow: 0 0 0 3px rgba(143, 179, 169, 0.2);
 }
 
 .form-group textarea {
@@ -1061,6 +1041,17 @@ footer {
     background: var(--color-bg-dark);
     color: var(--color-text-inverse);
     padding: var(--spacing-lg) 0;
+}
+
+.footer-logo {
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+    max-width: 120px;
+    opacity: 0.9;
 }
 
 .footer-inner {
@@ -1413,12 +1404,13 @@ footer {
         padding: 0 var(--spacing-sm);
     }
 
-    .logo span {
+    /* Show icon logo on mobile, hide horizontal */
+    .logo-img {
         display: none;
     }
 
-    .logo-mark::after {
-        font-size: 10px;
+    .logo-img-mobile {
+        display: block;
     }
 }
 
