@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Install Email Signature | JLA Recovery Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/JLA_Logo_Icon.png">
+<link rel="apple-touch-icon" href="images/JLA_Logo_Icon.png">
+<style>
+  :root{
+    --navy:#1B2A4A; --sage:#8FB3A9; --text:#1f2937; --muted:#6b7280;
+    --font:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:var(--font);color:var(--text);background:#f9fafb;line-height:1.5;}
+  .wrap{max-width:520px;margin:0 auto;padding:28px 20px 48px;}
+  h1{font-size:1.4rem;color:var(--navy);text-align:center;margin-bottom:6px;}
+  .sub{text-align:center;color:var(--muted);font-size:.95rem;margin-bottom:24px;}
+
+  .btn{
+    display:block;width:100%;border:0;border-radius:12px;cursor:pointer;
+    background:var(--navy);color:#fff;font-family:var(--font);font-weight:600;
+    font-size:1.15rem;padding:18px 20px;text-align:center;
+    box-shadow:0 2px 8px rgba(27,42,74,.25);transition:background .15s,transform .05s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .btn:active{transform:scale(.99);}
+  .btn.copied{background:#2e7d52;}
+  .btn:disabled{opacity:.9;cursor:default;}
+
+  .steps{
+    background:#fff;border:1px solid #e5e7eb;border-radius:12px;
+    padding:18px 18px 6px;margin:22px 0 0;display:none;
+  }
+  .steps.show{display:block;}
+  .steps h2{font-size:1rem;color:var(--navy);margin-bottom:12px;}
+  .step{display:flex;gap:12px;margin-bottom:14px;font-size:.97rem;}
+  .num{flex:0 0 26px;height:26px;background:var(--sage);color:#fff;border-radius:50%;
+       display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;}
+  .step b{color:var(--navy);}
+  .tip{background:#fff8e6;border:1px solid #f3e1a8;border-radius:10px;padding:12px 14px;
+       font-size:.9rem;color:#7a5c00;margin:6px 0 4px;}
+
+  .preview-label{text-align:center;color:var(--muted);font-size:.82rem;
+       text-transform:uppercase;letter-spacing:.05em;margin:30px 0 10px;}
+  .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;}
+
+  .fallback{margin-top:26px;}
+  .fallback summary{cursor:pointer;color:var(--navy);font-weight:600;font-size:.95rem;}
+  .fallback p{font-size:.92rem;color:var(--text);margin:10px 0;}
+  .fallback li{font-size:.92rem;margin:6px 0 6px 18px;}
+  code{background:#eef0f3;padding:1px 6px;border-radius:4px;font-size:.85em;}
+  .foot{text-align:center;color:var(--muted);font-size:.8rem;margin-top:34px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Install Your Email Signature</h1>
+  <p class="sub">One tap copies the whole signature&mdash;logo, text, and links&mdash;so you never have to select it by hand.</p>
+
+  <button id="copyBtn" class="btn" onclick="copySig()">Copy Signature</button>
+
+  <div id="steps" class="steps">
+    <h2>Now paste it into Mail</h2>
+    <div class="step"><span class="num">1</span><span>Open <b>Settings &rarr; Apps &rarr; Mail &rarr; Signature</b> (older iOS: <b>Settings &rarr; Mail &rarr; Signature</b>).</span></div>
+    <div class="step"><span class="num">2</span><span>Tap the signature box, select any existing text, and delete it.</span></div>
+    <div class="step"><span class="num">3</span><span>Tap and hold in the empty box, then tap <b>Paste</b>.</span></div>
+    <div class="step"><span class="num">4</span><span>If the logo or colors look plain, <b>shake your phone</b> and tap <b>Undo</b> &mdash; it reverts to the formatted version.</span></div>
+    <div class="tip">Tip: send yourself a test email afterward to confirm the logo and links show up.</div>
+  </div>
+
+  <p class="preview-label">Preview</p>
+  <div class="card">
+    <!-- SIGNATURE START -->
+    <div id="sig"><table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;"><tr><td style="vertical-align:top;padding-right:14px;border-right:2px solid #7a9e8e;"><a href="https://jlarecoverysolutions.com" style="text-decoration:none;"><img src="https://jlarecoverysolutions.com/images/email-logo.png" alt="JLA Recovery Solutions" width="120" style="display:block;border:0;" /></a></td><td style="vertical-align:top;padding-left:14px;"><table cellpadding="0" cellspacing="0" border="0"><tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#1a2744;">James L. Ariail III</td></tr><tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#555555;padding-top:1px;">Principal</td></tr><tr><td style="padding-top:8px;"><table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#555555;"><tr><td style="padding-right:4px;color:#1a2744;font-weight:bold;">M:</td><td><a href="tel:+17032839571" style="color:#555555;text-decoration:none;">703-283-9571</a></td></tr><tr><td style="padding-right:4px;color:#1a2744;font-weight:bold;padding-top:2px;">E:</td><td style="padding-top:2px;"><a href="mailto:james.ariail@jlarecoverysolutions.com" style="color:#1a6bc4;text-decoration:none;">james.ariail@jlarecoverysolutions.com</a></td></tr><tr><td style="padding-right:4px;color:#1a2744;font-weight:bold;padding-top:2px;">W:</td><td style="padding-top:2px;"><a href="https://jlarecoverysolutions.com" style="color:#1a6bc4;text-decoration:none;">jlarecoverysolutions.com</a></td></tr></table></td></tr><tr><td style="padding-top:8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;"><a href="https://calendly.com/james-ariail-jlarecoverysolutions/30min" style="color:#1a6bc4;text-decoration:none;">Schedule a Meeting</a><span style="color:#cccccc;padding:0 5px;">|</span><a href="https://www.linkedin.com/in/jamesariail" style="color:#1a6bc4;text-decoration:none;">LinkedIn</a><span style="color:#cccccc;padding:0 5px;">|</span><a href="https://apps.apple.com/us/app/disasterdata/id6759253589" style="color:#1a6bc4;text-decoration:none;">DisasterData for iOS</a></td></tr></table></td></tr></table></div>
+    <!-- SIGNATURE END -->
+  </div>
+
+  <details class="fallback">
+    <summary>Button didn't work? Use the manual method</summary>
+    <p>This can happen if the page wasn't opened over <code>https</code>. As a backup:</p>
+    <ol>
+      <li>Tap and hold anywhere on the <b>Preview</b> signature above.</li>
+      <li>In the popup, tap <b>Select All</b> (do <i>not</i> drag the blue dots&mdash;dragging can't span the logo and text).</li>
+      <li>Tap <b>Copy</b>, then paste into the signature box as described above.</li>
+    </ol>
+  </details>
+
+  <p class="foot">JLA Recovery Solutions, LLC</p>
+</div>
+
+<script>
+function plainText(){
+  return [
+    "James L. Ariail III",
+    "Principal",
+    "M: 703-283-9571",
+    "E: james.ariail@jlarecoverysolutions.com",
+    "W: jlarecoverysolutions.com",
+    "Schedule a Meeting: https://calendly.com/james-ariail-jlarecoverysolutions/30min",
+    "LinkedIn: https://www.linkedin.com/in/jamesariail",
+    "DisasterData for iOS: https://apps.apple.com/us/app/disasterdata/id6759253589"
+  ].join("\n");
+}
+
+function markCopied(){
+  var b=document.getElementById('copyBtn');
+  b.textContent='✓ Copied — now paste it in Mail';
+  b.classList.add('copied');
+  document.getElementById('steps').classList.add('show');
+  document.getElementById('steps').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function selectSignature(){
+  var node=document.getElementById('sig');
+  var range=document.createRange();
+  range.selectNodeContents(node);
+  var sel=window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+}
+
+async function copySig(){
+  var html=document.getElementById('sig').innerHTML;
+  var text=plainText();
+  // Preferred: rich clipboard write (requires https secure context)
+  if(navigator.clipboard && window.ClipboardItem){
+    try{
+      await navigator.clipboard.write([new ClipboardItem({
+        'text/html': new Blob([html],{type:'text/html'}),
+        'text/plain': new Blob([text],{type:'text/plain'})
+      })]);
+      markCopied();
+      return;
+    }catch(e){ /* fall through */ }
+  }
+  // Fallback: select the rendered signature and run execCommand copy
+  try{
+    selectSignature();
+    var ok=document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    if(ok){ markCopied(); return; }
+  }catch(e){}
+  // Last resort: leave it selected so the user can tap Copy themselves
+  selectSignature();
+  var b=document.getElementById('copyBtn');
+  b.textContent='Tap "Copy" in the popup above the selection';
+}
+</script>
+</body>
+</html>
