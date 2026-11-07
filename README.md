@@ -214,6 +214,12 @@ When you start publishing on Substack:
 </li>
 ```
 
+### Site Design (November 2026 refresh)
+
+The six main pages (index, services, experience, about, insights, contact) use `css/site.css` and `js/site.js`. The DisasterData pages still use the original `css/styles.css` and `js/main.js`, so changes to one set do not affect the other.
+
+The capability statement PDF lives at `downloads/JLA-Recovery-Solutions-Capability-Statement.pdf`. To publish a new version, replace that file with the new PDF using the same name; every download button on the site points to it. If the first page changes, also refresh `images/capability-statement-preview.jpg`.
+
 ### Updating Styles
 
 All styles are in `css/styles.css`. The file is organized into sections:
