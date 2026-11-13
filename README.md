@@ -197,26 +197,13 @@ In `experience.html`, copy an existing project block:
 </div>
 ```
 
-### Adding Insights/Articles
+### Insights Page (removed for now)
 
-When you start publishing on Substack:
-
-1. Open `insights.html`
-2. Find the `articles-list` section
-3. Add new list items with links:
-
-```html
-<li>
-    <a href="https://yoursubstack.substack.com/p/article-slug" target="_blank" rel="noopener noreferrer">
-        Article Title Here
-    </a>
-    <br><span style="color: var(--color-text-light); font-size: 0.9375rem;">Month Year</span>
-</li>
-```
+The Insights page was taken off the site in November 2026 until new articles are published. `insights.html` now only forwards old links to the About page, which lists the published articles. To bring the page back, restore its content from the commit "Refresh site design and add downloadable capability statement" and add it back to the menu and footer on each page and to `sitemap.xml`.
 
 ### Site Design (November 2026 refresh)
 
-The six main pages (index, services, experience, about, insights, contact) use `css/site.css` and `js/site.js`. The DisasterData pages still use the original `css/styles.css` and `js/main.js`, so changes to one set do not affect the other.
+The five main pages (index, services, experience, about, contact) use `css/site.css` and `js/site.js`. The DisasterData pages still use the original `css/styles.css` and `js/main.js`, so changes to one set do not affect the other.
 
 The capability statement PDF lives at `downloads/JLA-Recovery-Solutions-Capability-Statement.pdf`. To publish a new version, replace that file with the new PDF using the same name; every download button on the site points to it. If the first page changes, also refresh `images/capability-statement-preview.jpg`.
 
@@ -240,7 +227,7 @@ site/
 ├── services.html       # Services page
 ├── experience.html     # Experience/projects page
 ├── about.html          # About page
-├── insights.html       # Insights/articles page (placeholder)
+├── insights.html       # Forwards old links to about.html (page removed for now)
 ├── contact.html        # Contact page with form
 ├── css/
 │   └── styles.css      # All styles
