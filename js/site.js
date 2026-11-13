@@ -71,7 +71,7 @@
             fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
                 .then(function (res) {
                     if (res.ok) {
-                        show('Thank you. I will respond to your message within one to two business days.', 'success');
+                        show(form.getAttribute('data-success') || 'Thank you. I will respond to your message within one to two business days.', 'success');
                         form.reset();
                     } else {
                         show('There was an error sending your message. Please try again or connect with me on LinkedIn.', 'error');

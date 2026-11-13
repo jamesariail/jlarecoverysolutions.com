@@ -379,13 +379,13 @@ ul { padding-left: 1.2em; }
 .form-group { margin-bottom: 18px; }
 .form-group label { display: block; font-weight: 600; font-size: 0.95rem; color: var(--navy); margin-bottom: 6px; }
 .form-group .required { color: #B42318; }
-.form-group input, .form-group textarea {
+.form-group input, .form-group textarea, .form-group select {
     width: 100%; font: inherit; font-size: 1rem; color: var(--ink);
     padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: var(--radius-sm); background: #fff;
     transition: border-color .2s, box-shadow .2s;
 }
 .form-group textarea { min-height: 150px; resize: vertical; }
-.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--sage-strong); box-shadow: 0 0 0 4px rgba(143, 179, 169, 0.3); }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--sage-strong); box-shadow: 0 0 0 4px rgba(143, 179, 169, 0.3); }
 .form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-note { font-size: 0.9rem; color: var(--ink-3); margin: 14px 0 0; }
 .form-message { display: none; padding: 14px 16px; border-radius: var(--radius-sm); margin-bottom: 18px; font-weight: 600; }
@@ -410,6 +410,39 @@ ul { padding-left: 1.2em; }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.in { opacity: 1; transform: none; }
 .no-js .reveal { opacity: 1; transform: none; }
+
+/* ---------- DisasterData app pages ---------- */
+.form-group select { appearance: none; -webkit-appearance: none; padding-right: 40px; cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23445069' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.feature-card {
+    display: flex; gap: 20px; align-items: flex-start; background: #fff; border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 28px; transition: transform .25s var(--ease), box-shadow .25s, border-color .25s;
+}
+.feature-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); border-color: transparent; }
+.feature-card .cap-icon { margin: 0; flex: none; }
+.feature-card h3 { font-size: 1.18rem; margin-bottom: 6px; }
+.feature-card p { margin: 0; color: var(--ink-2); font-size: 1rem; }
+.notice {
+    max-width: 860px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--sage);
+    border-radius: var(--radius); padding: 30px 34px;
+}
+.notice h2 { font-size: 1.35rem; margin-bottom: 12px; }
+.notice p { color: var(--ink-2); font-size: 1rem; }
+.notice p:last-child { margin-bottom: 0; }
+.link-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.narrow { max-width: 780px; }
+.prose h2 { font-size: 1.5rem; margin: 44px 0 12px; }
+.prose h2:first-child, .prose .meta + h2 { margin-top: 0; }
+.prose p, .prose li { color: var(--ink-2); }
+.prose ul { padding-left: 1.2em; margin: 0 0 18px; }
+.prose li { margin-bottom: 6px; }
+.prose .meta { font-size: 0.95rem; color: var(--ink-3); margin-bottom: 36px; }
+.contact-block { background: var(--sand); border-radius: var(--radius); padding: 22px 26px; }
+.contact-block p { margin: 0 0 4px; }
+.contact-block p:last-child { margin: 0; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
@@ -454,7 +487,9 @@ ul { padding-left: 1.2em; }
     .section { padding: 72px 0; }
     .wrap { padding-left: 18px; padding-right: 18px; }
     .brand img { height: 40px; }
-    .cap-grid, .work-grid, .svc-cols, .form-row { grid-template-columns: 1fr; }
+    .cap-grid, .work-grid, .svc-cols, .form-row, .feature-grid { grid-template-columns: 1fr; }
+    .feature-card { padding: 22px; }
+    .notice { padding: 24px; }
     .proof-grid { grid-template-columns: 1fr; }
     .proof-item, .proof-item:nth-child(3) { border-left: 0; padding: 22px 0; border-top: 1px solid var(--line); }
     .proof-item:first-child { border-top: 0; }
